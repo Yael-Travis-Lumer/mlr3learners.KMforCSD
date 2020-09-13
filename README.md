@@ -1,13 +1,13 @@
 # mlr3learners.KMforCSD
 AN R package mlr3learners.KMforCSD, that wraps the KMforCSD algorithm as an MLR3 learner. The mlr3learners.KMforCSD package enables cross validation with respect to the loss presented in the paper Kernel Machines for Current Status Data.
 ## Example
-1. Initialize hyper-parameter tuner and optimization criteria.
+1. Initialize hyper-parameter tuner and optimization criteria:
 ```{r}
 mlr_tuners$get("design_points")
 tnr("design_points")
 mlr3::mlr_measures$add("csd_risk", MeasureCSD)
 ```
-2. Define train set and test set as MLR3 tasks.
+2. Define train set and test set as MLR3 tasks:
 ```{r}
 n_test = 10000
 n_train = 100
@@ -18,7 +18,7 @@ train_list = weibull_data(n=n_train)
 train_data = train_list$data
 task_train =  TaskRegr$new(id = "Train Data", backend = train_data, target = "C")
 ```
-3. Initializing the KM-CSD as an MLR3 learner, with either an RBF kernel or a linear kernel.
+3. Initializing the KM-CSD as an MLR3 learner, with either an RBF kernel or a linear kernel:
 ```{r}
 learner_rbf = lrn("regr.KMforCSD")
 learner_rbf$param_set$values$kernel = "rbfdot"
