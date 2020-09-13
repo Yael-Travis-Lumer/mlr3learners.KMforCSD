@@ -30,8 +30,8 @@ learner_linear$param_set$values$kernel = "vanilladot"
 ```
 4. Use cross-validation:
 ```{r}
-cv_cost_val=c(0.1,1,10,100), # cost CV values
-cv_gamma_val=c(3,12,50,200), # RBF width CV values
+cv_cost_val=c(0.1,1,10,100) # cost CV values
+cv_gamma_val=c(3,12,50,200) # RBF width CV values
 
 #Tuning hyper-parameters
 terminator_linear = term("evals", n_evals = length(cv_cost_val))
