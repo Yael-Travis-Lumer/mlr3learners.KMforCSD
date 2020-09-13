@@ -3,6 +3,7 @@ AN R package mlr3learners.KMforCSD, that wraps the KMforCSD algorithm as an MLR3
 ## Example
 1. After installing the package, initialize hyper-parameter tuner and optimization criteria:
 ```{r}
+library(mlr3)
 library(mlr3tuning)
 library(mlr3learners.KMforCSD)
 mlr_tuners$get("design_points")
