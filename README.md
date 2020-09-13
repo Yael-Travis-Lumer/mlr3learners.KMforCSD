@@ -1,5 +1,5 @@
 # mlr3learners.KMforCSD
-AN R package mlr3learners.KMforCSD, that wraps the KMforCSD R package as an MLR3 learner. The mlr3learners.KMforCSD package enables cross validation.
+AN R package mlr3learners.KMforCSD, that wraps the KMforCSD algorithm as an MLR3 learner. The mlr3learners.KMforCSD package enables cross validation with respect to the loss presented in the paper Kernel Machines for Current Status Data.
 ## Example
 1. Initialize hyper-parameter tuner and optimization criteria.
 ```{r}
