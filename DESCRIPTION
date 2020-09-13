@@ -1,0 +1,27 @@
+Package: mlr3learners.KMforCSD
+Title: An MLR3 Regression Learner that Enables Cross-Validation for the Proposed Kernel Machine.
+Version: 0.1.0
+Depends:
+    R (>= 3.6)
+Imports:
+    data.table,
+    mlr3 (>= 0.1.7),
+    mlr3misc,
+    paradox,
+    R6,
+    KMforCSD,
+    mlr3verse,
+    ks
+Suggests:
+    checkmate,
+    rmarkdown,
+    testthat
+Authors@R: person("Yael", "Travis-Lumer", email = "yael.travis@gmail.com", role = c("aut", "cre"))
+Description: This package implements kernel machine regression based on a modification
+    of the quadratic loss, as described in \href{https://arxiv.org/abs/1505.00991}{Kernel Machines for Current Starus Data}.
+    This package is a wrapper of the KMforCSD package that enables CV for hyper-parameter tuning, and is based on the MLR3 template. 
+License: GPL-3
+Encoding: UTF-8
+NeedsCompilation: no
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
