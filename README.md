@@ -6,6 +6,7 @@ AN R package mlr3learners.KMforCSD, that wraps the KMforCSD algorithm as an MLR3
 library(mlr3)
 library(mlr3tuning)
 library(mlr3learners.KMforCSD)
+library(data.table)
 mlr_tuners$get("design_points")
 tnr("design_points")
 mlr3::mlr_measures$add("csd_risk", MeasureCSD)
