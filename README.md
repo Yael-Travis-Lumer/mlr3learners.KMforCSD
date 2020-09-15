@@ -1,12 +1,25 @@
 # mlr3learners.KMforCSD
-AN R package mlr3learners.KMforCSD, that wraps the KMforCSD algorithm as an MLR3 learner. The mlr3learners.KMforCSD package enables cross validation with respect to the loss presented in the paper Kernel Machines for Current Status Data.
+mlr3learners.KMforCSD is an R package that wraps the [KMforCSD](https://github.com/Yael-Travis-Lumer/KMforCSD) algorithm as an MLR3 learner. The mlr3learners.KMforCSD package enables cross validation with respect to the loss presented in the paper Kernel Machines for Current Status Data.
+
+## Installation
+You can install the package from its [GitHub repository](https://github.com/Yael-Travis-Lumer/mlr3learners.KMforCSD/). You first need to install the [devtools](https://github.com/r-lib/devtools) package.
+```{r}
+install.packages("devtools")
+```
+Then install mlr3learners.KMforCSD using the `install_github` function in the [devtools](https://github.com/r-lib/devtools) package.
+```{r}
+library(devtools)
+install_github("Yael-Travis-Lumer/mlr3learners.KMforCSD")
+```
+
 ## Example
-1. After installing the package, initialize hyper-parameter tuner and optimization criteria:
+1. Initialize hyper-parameter tuner and optimization criteria:
 ```{r}
 library(mlr3)
 library(mlr3tuning)
-library(mlr3learners.KMforCSD)
 library(data.table)
+library(KMforCSD)
+library(mlr3learners.KMforCSD)
 mlr_tuners$get("design_points")
 tnr("design_points")
 mlr3::mlr_measures$add("csd_risk", MeasureCSD)
